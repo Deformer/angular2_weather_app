@@ -1,0 +1,8 @@
+<h1 class="forecast-header">{{city}}</h1>
+<p class="forecast-paragraph">Select a day</p>
+<div class="forecast-icons-container" *ngIf="weather">
+    <app-day-icon *ngFor="let day of weather.list"
+                  [header]="formatDate(day.dt)"
+                  [imageUrl]="'http://openweathermap.org/img/w/'+day.weather[0].icon+'.png'"
+    ></app-day-icon>
+</div>

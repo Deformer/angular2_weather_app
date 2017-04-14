@@ -1,0 +1,16 @@
+:host{
+  background-size: cover;
+  background-image: url('/assets/images/pattern.svg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 44px);
+  width: 100%;
+}
+
+.pick-city-header{
+  font-size: 45px;
+  color: #fff;
+  font-weight: 100;
+}
