@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ForecastService} from "../../services/forecast/forecast.service";
+import {Component, OnInit} from "@angular/core";
+import {WeatherService} from "../../services/weather/weather.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {HelperService} from "../../services/helper/helper.service";
 
@@ -13,24 +13,19 @@ export class ForecastComponent implements OnInit {
   city: String;
   error: Object;
 
-  constructor(
-    private foreCastService: ForecastService,
-    private activedRoute: ActivatedRoute,
-    private helperService: HelperService,
-    private router: Router
-  ) { }
+  constructor(private forecastService: WeatherService,
+              private activatedRoute: ActivatedRoute,
+              private helperService: HelperService,
+              private router: Router) {
+  }
 
   ngOnInit() {
-    this.activedRoute.params.subscribe((params: Params) => {
+    this.activatedRoute.params.subscribe((params: Params) => {
       this.city = params['city'];
-      this.foreCastService.getWeather(this.city)
+      this.forecastService.getWeatherList(this.city)
         .then(weather => this.weather = weather)
         .catch(error => this.error = error);
     });
-  }
-
-  formatDate(date): String {
-    return this.helperService.formatHeaderFromDate(date);
   }
 
   goToDetail(index) {

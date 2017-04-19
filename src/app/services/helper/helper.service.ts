@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from "@angular/core";
 
 @Injectable()
 export class HelperService {
   private days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-  constructor() { }
+  constructor() {
+  }
 
   formatHeaderFromDate(time_sec): String {
     const date = new Date(time_sec * 1000),
@@ -14,7 +15,7 @@ export class HelperService {
     return `${day}, ${month} ${day_of_month}`;
   }
 
-  formatTemp(temp): Number {
+  formatTemp(temp: number): Number {
     return Math.round((temp - 273) * 100) / 100;
   }
 

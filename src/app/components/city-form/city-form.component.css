@@ -1,11 +1,11 @@
-:host{
+:host {
   display: flex;
-  flex-direction : row;
-  justify-content : center;
-  align-items : center;
-  max-width : 300px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
 }
 
-.city-form-button{
+.city-form-button {
   margin: 0px;
 }

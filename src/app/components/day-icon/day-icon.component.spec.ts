@@ -1,9 +1,7 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { DayIconComponent } from './day-icon.component';
+import {DayIconComponent} from "./day-icon.component";
 
 describe('DayIconComponent', () => {
   let component: DayIconComponent;
@@ -11,9 +9,9 @@ describe('DayIconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DayIconComponent ]
+      declarations: [DayIconComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

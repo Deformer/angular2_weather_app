@@ -1,9 +1,7 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { MainHeaderComponent } from './main-header.component';
+import {MainHeaderComponent} from "./main-header.component";
 
 describe('MainHeaderComponent', () => {
   let component: MainHeaderComponent;
@@ -11,9 +9,9 @@ describe('MainHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainHeaderComponent ]
+      declarations: [MainHeaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

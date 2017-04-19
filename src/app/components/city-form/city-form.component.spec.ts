@@ -1,9 +1,7 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { CityFormComponent } from './city-form.component';
+import {CityFormComponent} from "./city-form.component";
 
 describe('CityFormComponent', () => {
   let component: CityFormComponent;
@@ -11,9 +9,9 @@ describe('CityFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CityFormComponent ]
+      declarations: [CityFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,4 +1,4 @@
-:host{
+:host {
   background-size: cover;
   background-image: url('/assets/images/pattern.svg');
   display: flex;
@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.pick-city-header{
+.pick-city-header {
   font-size: 45px;
   color: #fff;
   font-weight: 100;

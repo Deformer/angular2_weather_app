@@ -1,3 +1,17 @@
-<p>
-  detail works!
-</p>
+<app-day-icon
+  *ngIf="weatherDetail "
+  [imageUrl]="'http://openweathermap.org/img/w/'+weatherDetail.weather[0].icon+'.png'"
+  [header]="helperService.formatHeaderFromDate(weatherDetail.dt)"
+>
+</app-day-icon>
+<div *ngIf="weatherDetail && !error" class="detail-body">
+  <p>{{city}}</p>
+  <p>{{weatherDetail.weather[0].description}}</p>
+  <p>min temp: {{helperService.formatTemp(weatherDetail.temp.min)}}</p>
+  <p>max temp: {{helperService.formatTemp(weatherDetail.temp.max)}}</p>
+  <p>humidity: {{weatherDetail.humidity}}</p>
+</div>
+<app-error
+  *ngIf="error"
+  [error]="error"
+></app-error>

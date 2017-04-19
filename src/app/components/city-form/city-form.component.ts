@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from "@angular/core";
 import {Router} from "@angular/router";
 
 @Component({
@@ -6,16 +6,15 @@ import {Router} from "@angular/router";
   templateUrl: './city-form.component.html',
   styleUrls: ['./city-form.component.css']
 })
-export class CityFormComponent implements OnInit {
+export class CityFormComponent {
   city: String = '';
-  constructor(private router: Router) { }
 
-  ngOnInit() {
+  constructor(private router: Router) {
   }
 
   onButtonClick() {
     if (this.city) {
-      this.router.navigate(['/forecast', this.city]);
+      this.router.navigate(['/weather', this.city]);
       this.city = '';
     }
   }
